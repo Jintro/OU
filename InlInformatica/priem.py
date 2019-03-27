@@ -7,7 +7,7 @@ def is_priem(x):
 		priem = False
 
 	#voor alle andere getallen
-	for i in range(2, int(x / 2)):
+	for i in range(2, int(x / 2) + 1):
 		if x % i == 0:
 			priem = False 
 			break
@@ -17,11 +17,12 @@ def is_priem(x):
 def priemreeks(aantal):
 	print("1e priemgetal: " + str(2))
 	getal = 3
-	gevonden = 2
-	while gevonden <= aantal:
+	gevonden = 1
+	while gevonden < aantal:
 		if is_priem(getal):
-			print (str(gevonden) + "e priemgetal: "+ str(getal))
 			gevonden += 1
+			print (str(gevonden) + "e priemgetal: "+ str(getal))
+
 		getal += 2
 
 #testen van de functie is priem
